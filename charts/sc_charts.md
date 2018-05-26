@@ -13,7 +13,7 @@ QtChartsはＱｔのサイトには下記のように紹介されています．
 
 ## 今回の目標
 
-![Screenshot from 2018-05-26 16-19-57.png](./Screenshot from 2018-05-26 16-19-57.png)
+![Screenshot from 2018-05-26 16-19-57.png](../image/charts/Screenshot from 2018-05-26 16-19-57.png)
 
 今回作成するグラフは，リアルタイムにデータを逐次更新していくグラフです．
 Qtでグラフを表示するためには以下の４つのクラスを使用します．
@@ -89,11 +89,11 @@ QtCharts::QValueAxis --> QtCharts::QChart
 Qt Createrを立ち上げ，左上の方にあるプロジェクト作成をクリックしてください．
 あとは，以下の写真にしたがってよしなに設定してください．
 
-![new_project.png](./new_project.png)
+![new_project.png](../image/charts/new_project.png)
 
-![widget_application.png](./widget_application.png)
+![widget_application.png](../image/charts/widget_application.png)
 
-![widget_application2.png](./widget_application2.png)
+![widget_application2.png](../image/charts/widget_application2.png)
 
 ### GUI作成
 左側のタブからデザインをクリックしてください．
@@ -101,24 +101,24 @@ Qt Createrを立ち上げ，左上の方にあるプロジェクト作成をク�
 メインウィンドウに貼り付けてください．ちなみに，Graphics Viewはウィジェット一覧のDisplay Widgetsの
 項目にあります．筆者はこれが見つからなくて精神を消耗しました．
 
-![Screenshot from 2018-05-26 13-47-47.png](./Screenshot from 2018-05-26 13-47-47.png)
+![Screenshot from 2018-05-26 13-47-47.png](../image/charts/Screenshot from 2018-05-26 13-47-47.png)
 
 次に，**Graphics View**クラスを**格上げ**という操作によって，**QtCharts::QChartView**に
 変化させます．　まず，メインウィンドウに先ほど貼り付けた**Graphics View**上で右クリックします．
 右クリックで現れるメニューから**格上げ先を指定**を選択します．
 
-![Screenshot from 2018-05-26 13-48-36.png](./Screenshot from 2018-05-26 13-48-36.png)
+![Screenshot from 2018-05-26 13-48-36.png](../image/charts/Screenshot from 2018-05-26 13-48-36.png)
 
 そうすると，下のような格上げ先を指定するウィンドウが表示されるので，
 
-![2.png](./2.png)
+![2.png](../image/charts/2.png)
 
 - ベースクラス名
 - 格上げされたクラス名
 - ヘッダファイル
 を下の図のように設定し，追加ボタンを押した後，格上げボタンを押してください．
 
-![4.png](./4.png)
+![4.png](../image/charts/4.png)
 
 これで，先ほどメインウィンドウに貼り付けた**Graphics View**クラスは**QtCharts::QChartView**クラス
 になりました．
@@ -134,7 +134,7 @@ QChartView QChartView;
 画面右下の方に表示されますので，その中の**objectName**のところをダブルクリックして編集します．
 つまり，下の図のようにしてください．
 
-![Screenshot from 2018-05-26 23-11-22.png](./Screenshot from 2018-05-26 23-11-22.png)
+![Screenshot from 2018-05-26 23-11-22.png](../image/charts/Screenshot from 2018-05-26 23-11-22.png)
 
 
 ### .pro [設定ファイルの修正]
@@ -144,7 +144,7 @@ QChartView QChartView;
 今回，QtChartsという名前のライブラリを使用するので，下の図のような感じで,.proファイルを編集します．
 
 
-![Screenshot from 2018-05-03 19-09-10.png](./Screenshot from 2018-05-03 19-09-10.png)
+![Screenshot from 2018-05-03 19-09-10.png](../image/charts/Screenshot from 2018-05-03 19-09-10.png)
 
 うまくい編集できていれば，ほとんど変化していませんが，下記のようになっていると思います．
 
@@ -321,7 +321,7 @@ ui->my_chart_view->chart()->setAxisX(this->axis, this->series);
 6. ピクセル表現の目盛り間距離をもちいて１目盛り分だけ表示するチャートを性の方向にスクロールさせる
 7. 新しいデータのx座標が３０を超えたら，更新ストップし，終了．
 
-![Screenshot from 2018-05-26 23-56-32.png](./Screenshot from 2018-05-26 23-56-32.png)
+![Screenshot from 2018-05-26 23-56-32.png](../image/charts/Screenshot from 2018-05-26 23-56-32.png)
 
 具体的には，下記のコードを４８行目くらいに貼り付けてください．
 
