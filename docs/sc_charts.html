@@ -11,7 +11,7 @@
 <body class="markdown haroopad">
 <h1 id="できるだけコードを書かないqt"><a name="できるだけコードを書かないqt" href="#できるだけコードを書かないqt"></a>できるだけコードを書かないQt</h1><h2 id="qtchart"><a name="qtchart" href="#qtchart"></a>QtChart</h2><p>今回もqtDesignerを使用してできるだけマウス用いてチャートを表示できる方法を勉強しましょう．<br><a href="https://doc.qt.io/qt-5.10/qtcharts-index.html">QtChatrs</a>はいろいろなグラフを表示するため<br>のモジュールです．どんなグラフを表示できるかは<a href="https://doc.qt.io/qt-5.10/qtcharts-examples.html">ここ</a>を見てください．いろいろなサンプルがあり明日．綺麗なグラフを作成することが可能です．<br>QtChartsはＱｔのサイトには下記のように紹介されています．</p><blockquote>
 <p>Qt Charts モジュールは簡単に使えるチャートコンポーネンツを提供します．<br>それは，Qt Graphics View Frameworkを使用しています．<br>ですので,簡単にモダンなユーザーインターフェースに統合可能です．<br>Qt ChartsはQWidges,QGraphicsWidget,もしくはQMLとして使用することが可能です．<br>ユーザはチャートのテーマを選ぶことによって簡単に魅力的なチャートを作成できます．</p>
-</blockquote><h2 id="今回の目標"><a name="今回の目標" href="#今回の目標"></a>今回の目標</h2><p><img src="file:///home/harumo/git/Qt_with_small_code/image/charts/Screenshot%20from%202018-05-26%2016-19-57.png" alt="Screenshot from 2018-05-26 16-19-57.png"></p><p>今回作成するグラフは，リアルタイムにデータを逐次更新していくグラフです．<br>Qtでグラフを表示するためには以下の４つのクラスを使用します．</p><ul>
+</blockquote><h2 id="今回の目標"><a name="今回の目標" href="#今回の目標"></a>今回の目標</h2><p><img src="file://../image/charts/Screenshot%20from%202018-05-26%2016-19-57.png" alt="Screenshot from 2018-05-26 16-19-57.png"></p><p>今回作成するグラフは，リアルタイムにデータを逐次更新していくグラフです．<br>Qtでグラフを表示するためには以下の４つのクラスを使用します．</p><ul>
 <li>QtCharts::QChartView</li><li>QtCharts::QChart</li><li>QtCharts::QSplineSeries</li><li>QtCharts::QValueAxis</li></ul><p>それぞれのクラスの関係性は以下の図のようになっています．</p><pre><code class="mermaid" data-origin="<pre><code class=&quot;mermaid&quot;>graph LR
 subgraph QtCharts::QChartView
     QtCharts::QChart
