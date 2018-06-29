@@ -24,15 +24,7 @@ Qtでグラフを表示するためには以下の４つのクラスを使用し
 
 それぞれのクラスの関係性は以下の図のようになっています．
 
-```mermaid
-graph LR
-subgraph QtCharts::QChartView
-	QtCharts::QChart
-end
-QtCharts::QSplineSeries --> QtCharts::QChart
-QtCharts::QValueAxis --> QtCharts::QChart
-
-```
+![class hierarchy](../image/charts/mermaid.png)
 
 - **QtCharts::QSplineSeries** 表示する点の座標データをこのクラスに格納します．　名前の通り，スプライン補間をおこなってくれます．
     QSplineSeriesの他にも，チャートタイプは
