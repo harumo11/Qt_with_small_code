@@ -13,8 +13,7 @@ QtChartsはＱｔのサイトには下記のように紹介されています．
 
 ## 今回の目標
 
-
-![Screenshot from 2018-05-26 16-19-57.png](../image/charts/Screenshot from 2018-05-26 16-19-57.png)
+![goal.png](../image/charts/goal.png)
 
 今回作成するグラフは，リアルタイムにデータを逐次更新していくグラフです．
 Qtでグラフを表示するためには以下の４つのクラスを使用します．
